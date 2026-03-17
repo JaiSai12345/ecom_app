@@ -1,0 +1,16 @@
+<?php include('../config/configure.php');
+    echo "<pre>";
+    print_r($_POST);
+    // if($_GET['mode'] == 'login'){
+        $username=$_POST['username'];
+        $password=$_POST['upassword'];
+        if($username == ''|| $password == '')
+        {
+            header("Location: ../index.php?log=error");
+            exit;
+        }
+       
+        
+        header("Location: ../dashboard.php");
+        exit;
+?>
